@@ -1,5 +1,5 @@
 #!/bin/bash
-scriptsdir=tests
+scriptsdir= '/scripts'
 
 for SCRIPT in "$scriptsdir"/*
 do
