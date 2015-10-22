@@ -1,6 +1,6 @@
 #!/bin/bash
 
-touch temmp/results.html
+touch temp/results.html
 directory=${1-`pwd`}
 echo "
 <html>

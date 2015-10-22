@@ -1,0 +1,5 @@
+TEST NAME: Test project links
+TEST NUMBER: 001
+COMPONENT: client
+EXECUTABLE: click_projects.txt
+
