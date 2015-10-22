@@ -1,10 +1,8 @@
 #!/bin/bash
 
 #Builds the oracle for the test case
-
-
-
-
+echo “Test Case 1” > /oracles/Test_Case_1
+echo “Search” >> /oracles/Test_Case_1
 
 #Updates the HTML doc with PASS/FAIL and test case info
 
