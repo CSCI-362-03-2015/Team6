@@ -9,7 +9,7 @@ mv ~/testCases/tests/"$file" /home/web2py/applications/eden/tests/implementation
 done
 
 #runs all of the test cases
-for file in *.txt;
+for file in *.py;
 do
-python /home/web2py/applications/eden/tests/implementation/testsuites/robot``_tests/"$file"
+python /home/web2py/applications/eden/tests/implementation/testsuites/selenium_tests/"$file"
 done
