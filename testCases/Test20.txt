@@ -3,3 +3,6 @@ method:
 input: 
 oracle: ./tests/test20.txt
 driver: selenium
+
+Logs into the website using proper credentials and checks to see if "Organizations"
+is displayed on the home screen after login.
