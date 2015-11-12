@@ -1,0 +1,13 @@
+*** Settings ***
+Resource  ../resources/main.txt
+
+
+*** Test Cases ***
+Should click the projects button and load the next page
+   #opens the browser to the argument url
+    Go To  http://${SERVER}/eden/default/user/login
+    #Clicks the button
+    Click Button  xpath=//input[@class='btn' and @value='Requests']
+    Click Button  xpath=//input[@class='btn' and @value='Map']
+    #Checks if the text 'Map' is there or not
+    Page Should Contain  Map
