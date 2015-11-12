@@ -3,7 +3,7 @@
 mkdir home/web2py/applications/eden/tests/implementation/testsuits/selenium_tests
 
 #Moves all test cases to the correct location to be run
-for file in *.txt;
+for file in *.py;
 do
 mv ~/testCases/tests/"$file" /home/web2py/applications/eden/tests/implementation/testsuits/selenium_tests
 done

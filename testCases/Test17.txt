@@ -3,3 +3,6 @@ method:
 input: 
 oracle: ./tests/test17.txt
 driver: selenium
+
+Starts at Eden home index page and checks to see if "Sahana Eden Humanitarian Management Platform"
+is displayed on the screen.

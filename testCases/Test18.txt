@@ -3,3 +3,6 @@ method:
 input: 
 oracle: ./tests/test18.txt
 driver: selenium
+
+Starts at the Warehouses database page and checks to see if "Received/Incoming Shipments"
+is displayed on the screen.
