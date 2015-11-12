@@ -3,25 +3,30 @@
 #PROJ Team6
 #DATE 11/11/15
 
-#directory= ${1-`pwd`}
+directory=${1-`pwd`}
 file=$directory/input_file
-driver=`awk '/driver:/ {print $2}' input_file`
 
+for filename in "$directory/../testCases/"*
+do 
+
+echo $filename
+
+driver=`awk '/driver:/ {print $2}' Test1`
 input=`awk '
 BEGIN{
     FS=" "
     RS="\n"
     ORS="\n"
 }
-/method:/||/module:/||/input:/||/oracle:/{
+/method:/||/class:/||/input:/||/oracle:/{
     $1="";
     print;
-}' input_file`
+}' $filename`
 echo "$input"
 
 case "$driver" in 
     python)
-          echo "$input" | ./script_runner.py
+          echo "$input" | ./unit_test.py
         #call that python driver
         ;;
     selenium)
@@ -31,5 +36,6 @@ case "$driver" in
         #call robot
         ;;
 esac
+echo
 
-
+done

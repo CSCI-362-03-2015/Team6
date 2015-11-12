@@ -5,9 +5,7 @@ import importlib
 import fileinput
 import functools
 
-#from target_folder.sym_ed import breakfast
-
-from target_folder import sym_ed
+import eden_modules
 
 my_input = []
 my_output = ''
@@ -19,10 +17,9 @@ module_name = my_input[0]
 method_name = my_input[1] 
 args = my_input[2:] 
 
-mod = importlib.import_module('sym_ed.breakfast'.format(module_name))
+mod = importlib.import_module('eden_modules.{}'.format(module_name.replace(".py","")))
 print mod
 
-x = functools.partial(getattr(mod,'{}'.format(method_name)))
-x()
+method = functools.partial(getattr(mod,'{}'.format(method_name)),args)
+print method()
 
-#print True
