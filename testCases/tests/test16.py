@@ -3,10 +3,6 @@ import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-#print sys.argv
-#name = sys.argv[1]
-#print name
-
 class PythonOrgSearch(unittest.TestCase):
 	
 	def setUp(self):
@@ -19,9 +15,6 @@ class PythonOrgSearch(unittest.TestCase):
 		driver.implicitly_wait(10)
 
 		driver.get("http://127.0.0.1:8000/eden/default/user/login?_next=%2Feden%2Fdefault%2Findex")
-
-		#driver.get("http://127.0.0.1:8000/eden/default/index")
-		#self.assertIn("Python", driver.title)
 
  		elem = driver.find_element_by_name("email")
 		elem.send_keys("test")
