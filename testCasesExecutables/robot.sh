@@ -5,7 +5,7 @@ mkdir home/web2py/applications/eden/tests/implementation/testsuits/robot_tests
 #Moves all test cases to the correct location to be run
 for file in *.txt;
 do
-mv ~/Desktop/tests/"$file" /home/web2py/applications/eden/tests/implementation/testsuits/robot_tests
+mv ~/testCases/tests/"$file" /home/web2py/applications/eden/tests/implementation/testsuits/robot_tests
 done
 
 #runs all of the test cases

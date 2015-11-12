@@ -1,0 +1,5 @@
+class: s3parser.py
+method: is_session_alive
+input: email
+oracle: oracle15.txt
+driver: python

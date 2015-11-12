@@ -1,0 +1,5 @@
+class: req.py
+method: is_affiliated
+input: smith
+oracle: oracle11.txt
+driver: python

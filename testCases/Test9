@@ -1,0 +1,5 @@
+class: s3query.py
+method: is_string
+input: "hello"
+oracle: oracle09.txt
+driver: python

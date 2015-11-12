@@ -1,0 +1,5 @@
+class: arabic-reshaper.py
+method: is_haraka
+input: أ
+oracle: oracle02.txt
+driver: python

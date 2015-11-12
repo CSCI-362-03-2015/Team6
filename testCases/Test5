@@ -1,0 +1,6 @@
+class: s3cfg.py
+method: get_youtube_id
+input: https://www.youtube.com/watch?v=mLyOj_QD4a4
+oracle: oracle05.txt
+driver: python
+

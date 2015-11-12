@@ -1,0 +1,5 @@
+class: s3cfg.py
+method: is_cd_version
+input: 1.0
+oracle: oracle06.txt
+driver: python

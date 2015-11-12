@@ -1,0 +1,5 @@
+class: arabic-reshaper.py
+method: is_arabic_word
+input: قط
+oracle: oracle02.txt
+driver: python
