@@ -1,4 +1,4 @@
-class: s3parser.py
+class: modules s3 s3parser.py
 method: is_session_alive
 input: email
 oracle: oracle15.txt

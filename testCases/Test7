@@ -1,4 +1,4 @@
-class: jsmin.py
+class: static scripts tools jsmin.py
 method: isAlphanum
 input: a
 oracle: oracle07.txt

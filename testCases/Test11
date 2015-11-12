@@ -1,4 +1,4 @@
-class: req.py
+class: modules s3db req.py
 method: is_affiliated
 input: smith
 oracle: oracle11.txt

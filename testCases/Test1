@@ -1,4 +1,4 @@
-class: arabic-reshaper.py
+class: modules arabic_reshaper.py
 method: has_arabic_letters
 input: غ
 oracle: oracle01.txt 

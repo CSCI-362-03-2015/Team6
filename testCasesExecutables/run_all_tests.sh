@@ -11,7 +11,7 @@ do
 
 echo $filename
 
-driver=`awk '/driver:/ {print $2}' Test1`
+driver=`awk '/driver:/ {print $2}' $filename`
 input=`awk '
 BEGIN{
     FS=" "
@@ -22,8 +22,9 @@ BEGIN{
     $1="";
     print;
 }' $filename`
-echo "$input"
+#echo "$input"
 
+echo $driver
 case "$driver" in 
     python)
           echo "$input" | ./unit_test.py

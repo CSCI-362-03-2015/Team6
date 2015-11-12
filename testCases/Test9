@@ -1,4 +1,4 @@
-class: s3query.py
+class: modules unit_test s3 s3query.py
 method: is_string
 input: "hello"
 oracle: oracle09.txt
