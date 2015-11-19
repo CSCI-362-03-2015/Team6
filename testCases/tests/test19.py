@@ -14,17 +14,9 @@ class PythonOrgSearch(unittest.TestCase):
 
 		driver.implicitly_wait(10)
 
-		driver.get("http://127.0.0.1:8000/eden/default/user/login?_next=%2Feden%2Fdefault%2Findex")
+		driver.get("http://127.0.0.1:8000/eden/default/about")
 
- 		elem = driver.find_element_by_name("email")
-		elem.send_keys("admin@example.com")
-		elem = driver.find_element_by_name("password")
-		elem.send_keys("testing" + Keys.RETURN)
-
-		elem = driver.find_element_by_link_text("Login")
-		elem.click
-
-		assert "Situation" in driver.page_source
+		assert "nursix-1.1.0-devel-2831-gf6b46f0 (2015-09-29 09:09:29)" in driver.page_source
 
 
 	def tearDown(self):

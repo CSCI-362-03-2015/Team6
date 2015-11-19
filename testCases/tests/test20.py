@@ -14,17 +14,9 @@ class PythonOrgSearch(unittest.TestCase):
 
 		driver.implicitly_wait(10)
 
-		driver.get("http://127.0.0.1:8000/eden/default/user/login?_next=%2Feden%2Fdefault%2Findex")
-
- 		elem = driver.find_element_by_name("email")
-		elem.send_keys("admin@example.com")
-		elem = driver.find_element_by_name("password")
-		elem.send_keys("testing" + Keys.RETURN)
-
-		elem = driver.find_element_by_link_text("Login")
-		elem.click
+		driver.get("http://127.0.0.1:8000/eden/gis/index")
 	
-		assert "Organizations" in driver.page_source
+		assert "View Fullscreen Map" in driver.page_source
 
 
 	def tearDown(self):

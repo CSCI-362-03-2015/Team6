@@ -24,6 +24,7 @@ class PythonOrgSearch(unittest.TestCase):
 		elem = driver.find_element_by_link_text("Login")
 		elem.click
 
+		
 		assert "Invalid login" in driver.page_source
 
 
