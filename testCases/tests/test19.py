@@ -24,7 +24,7 @@ class PythonOrgSearch(unittest.TestCase):
 		elem = driver.find_element_by_link_text("Login")
 		elem.click
 
-		assert "Logged in" in driver.page_source
+		assert "Situation" in driver.page_source
 
 
 	def tearDown(self):
