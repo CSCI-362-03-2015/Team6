@@ -7,9 +7,12 @@ import sys
 import importlib
 import fileinput
 import functools
+import os
 
 import eden
 
+sys.path.append(os.getcwd() + '/testCasesExecutables/eden/modules');
+print sys.path 
 my_input = []
 my_output = ''
 
