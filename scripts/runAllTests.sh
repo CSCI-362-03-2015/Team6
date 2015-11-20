@@ -8,7 +8,7 @@
 directory=${1-`pwd`}
 
 #iterate though testCases directory
-for filename in "$directory/../testCases/"*
+for filename in "$directory/testCases/"*
 do 
 
 echo $filename
@@ -33,7 +33,7 @@ case "$driver" in
     python)
         #call that python driver, pipe input variable
         #output to console
-        echo "$input" | ./../testCasesExecutables/unit_test.py
+        echo "$input" | ./testCasesExecutables/unit_test.py
         ;;
     selenium)
         #call selenium

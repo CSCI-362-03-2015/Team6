@@ -1,4 +1,7 @@
 #!/bin/bash
+
+touch home/web2py/applications/eden/tests/implementation/testsuits/selenium_tests
+
 #Creates the directory to hold the tests
 mkdir home/web2py/applications/eden/tests/implementation/testsuits/selenium_tests
 
