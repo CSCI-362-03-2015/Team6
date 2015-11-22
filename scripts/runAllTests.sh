@@ -23,7 +23,7 @@ BEGIN{
     RS="\n"
     ORS="\n"
 }
-/method:/||/class:/||/input:/||/oracle:/{
+/method:/||/class:/||/input:/{
     $1="";
     print;
 }' $filename`

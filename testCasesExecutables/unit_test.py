@@ -12,8 +12,7 @@ import os
 import eden
 
 sys.path.append(os.getcwd() + '/testCasesExecutables/eden/modules');
-sys.path.append(os.getcwd() + '/home/web2py/gluon');
-print sys.path 
+sys.path.append(os.getcwd() + '/testCasesExecutables/eden/static/scripts/tools');
 my_input = []
 my_output = ''
 
@@ -22,10 +21,11 @@ for line in fileinput.input():
 
 module_name = my_input[0].replace(" ",".") 
 method_name = my_input[1] 
-args = my_input[2:] 
+args = my_input[2].split()
+print args
 
 mod = importlib.import_module('eden.{}'.format(module_name.replace(".py","")))
 print mod
 
-method = functools.partial(getattr(mod,'{}'.format(method_name)),args)
+method = functools.partial(getattr(mod,'{}'.format(method_name)),*args)
 print method()

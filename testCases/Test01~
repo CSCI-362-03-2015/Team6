@@ -1,5 +1,0 @@
-class:arabic_reshaper.py
-method:has_arabic_letters
-input:غ
-oracle:oracle01.txt 
-driver:python
