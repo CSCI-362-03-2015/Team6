@@ -8,64 +8,81 @@ import sys
 import fileinput
 import functools
 from types import FunctionType
-import eden
+from os.path import *
+import os
+import sys
+#import eden
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#The shell needs to make a txt file called testName.txt every time a
+#The shell needs to make a txt file calle testName.txt every time a
 #test is run and put the name of the test case file in it. The this driver
 #will parse that file(for 1 line containing the test case) and use it to call
 #the test case.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-testArray = []
-with open("testName.txt", "r")
-    i = 0
-    for line in test:
-        testArray.append(test[i])
-        
-        
-testName = str(testArray[0])
 outcome = ""
 
+#Creates a list of all the test cases
+filelocation = abspath(join(dirname( __file__ ), '..', 'testcases'))
+testList = []
+for file in os.listdir(filelocation):
+    if file.endswith(".txt"):
+        testList.append(file)
+
 #Itterates through the text file and assigns the class, method, inputs, etc. for use in the driver
-array = []
-with open(testName, "r") as ins:
+
+numTests = len(testList)
+
+for testCase in range(0, numTests):
     i = 0
-    for line in ins:
-        array.append(line.split(':',1)[-1])
-        print(array[i])
-        i+=1
+    testName = abspath(join(dirname( __file__ ), '..', "testcases/" + str(testList[i])))
+    print(testName)
+    i+=1
+    array = []
+    with open(testName, "r") as ins:
+        j = 0
+        for line in ins:
+            array.append(line.split(':',1)[-1])
+            print(array[j])
+            j+=1
 
-className = array[0].strip().replace(" ", ".")
-methodName = str(array[1].strip())
-inputData = array[2].strip()
-oracle = array[3].strip()
-oracle += ".txt"
+        className = array[0].strip().replace(" ", ".")
+        methodName = str(array[1].strip())
+        inputData = array[2].strip()
+        oracle = array[3].strip()
+        oracle += ".txt"
+        print("Oracle: " + oracle)
 
-#Imports the class name so that the method can be called
-module = importlib.import_module(className)
+        eden = abspath(join(dirname( __file__ ), '..', 'Eden'))
+        sys.path.insert(0, eden)
+        
+        #Imports the class name so that the method can be called
 
-#Sets x to the method to be called
-x = getattr(module, methodName)
+        module = importlib.import_module(className)
 
-#Calls the tested method and places it in result to be compared with the orcale's expected output
-result = x(inputData)
-print("Result: " + result)
+        #Sets x to the method to be called
+        x = getattr(module, methodName)
 
-array2 = []
-with open(oracle, "r") as filein:
-    i = 0
-    for line in filein:
-        array2.append(line.split(':',1)[-1])
-        i+=1
+        #Calls the tested method and places it in result to be compared with the orcale's expected output
+        result = x(inputData)
+        print("Result: " + result)
 
-expectedOutput = array2[2]
-print("Expected: " + expectedOutput)
+        oracleLocation = abspath(join(dirname( __file__ ), '..', 'oracles'))
+        print(oracleLocation)
+        array2 = []
+        with open(oracleLocation + "\\" + oracle, "r") as filein:
+            i = 0
+            for line in filein:
+                array2.append(line.split(':',1)[-1])
+                i+=1
 
-if (result == expectedOutput):
-    outcome = "PASS"
+        expectedOutput = array2[2]
+        print("Expected: " + expectedOutput)
 
-else:
-    outcome = "FAIL"
+        if (result == expectedOutput):
+            outcome = "PASS"
 
-#return outcome
-print(outcome)
+        else:
+            outcome = "FAIL"
+
+        #return outcome
+        print(outcome)
