@@ -38,9 +38,6 @@ case "$driver" in
     selenium)
         #call selenium
         ;;
-    robot)
-        #call robot
-        ;;
 esac
 echo
 
