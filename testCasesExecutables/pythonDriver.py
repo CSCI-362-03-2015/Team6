@@ -33,7 +33,6 @@ for file in os.listdir(str(filelocation)):
 
 #Itterates through the text file and assigns the class, method, inputs, etc. for use in the driver
 numTests = len(testList)
-print(numTests)
 i = 0
 for testCase in range(0, numTests):
     testName = abspath(join(dirname( __file__ ), '..', "testCases/" + str(testList[i])))
@@ -45,16 +44,20 @@ for testCase in range(0, numTests):
             array.append(line.split(':',1)[-1])
             j+=1
 
-        className = str(array[0].strip().replace(" ", "."))
-	className =  className.split('.',1)[-2]
+        className = str(array[0].strip())
+        folderLocation = className.split(' ',1)[0]
+        classLocation = className.split(' ',1)[1]
         methodName = str(array[1].strip())
         inputData = array[2].strip()
-        oracle = array[3].strip()
-        eden = abspath(join(dirname( __file__ ), '../', 'docs/eden/modules'))
+        oracle = array[3].strip() + ".txt"
+        if(folderLocation != "modules"):
+            eden = abspath(join(dirname( __file__ ), '../', 'eden/' + 'modules/' + str(folderLocation) + '/'))
+        else:
+            eden = abspath(join(dirname( __file__ ), '../', 'eden/' + 'modules/'))
         newPath = sys.path.insert(0, eden)
         #Imports the class name so that the method can be called
-	module = __import__(className)
-        #module = importlib.import_module("arabic_reshaper.py", __name__)
+        module = __import__(str(classLocation))
+        #module = importlib.import_module(className)
 
         #Sets x to the method to be called
         x = getattr(module, methodName)
@@ -62,7 +65,7 @@ for testCase in range(0, numTests):
         #Calls the tested method and places it in result to be compared with the orcale's expected output
         result = int(x(inputData))
 
-        oracleLocation = abspath(join(dirname( __file__ ), '..', 'oracles'))
+        oracleLocation = abspath(join(dirname( __file__ ), '../', 'oracles'))
         array2 = []
         with open(oracleLocation + "/" + oracle, "r") as filein:
             k = 0
@@ -71,7 +74,7 @@ for testCase in range(0, numTests):
                 k+=1
 
         expectedOutput = array2[2]
-	description = array2[0]
+        description = array2[0]
 
         if (int(result) == int(expectedOutput)):
             outcome = "PASS"
@@ -79,10 +82,10 @@ for testCase in range(0, numTests):
         else:
             outcome = "FAIL"
 
-        reportFile.write("Class Name: " + className + ", Method Name: " +
-                         methodName + ", Input: " + inputData + ", Oracle: " + 
-			 oracle + ", Result: " + outcome + "\n")
-        print("Class Name: " + className + ", Method Name: " +
-             methodName + ", Input: " + inputData + ", Description: " + description + ", Result: " + 
-	     outcome + "\n")
+        reportFile.write("Class Name:" + className + "\n" + "Method Name:" +
+                         methodName + "\n" + "Input:" + inputData + "\n" +
+                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n" + "\n" + "\n")
+        print("Class Name:" + className + "\n" + "Method Name:" +
+                         methodName + "\n" + "Input:" + inputData + "\n" +
+                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n" + "\n" + "\n")
 reportFile.close()
