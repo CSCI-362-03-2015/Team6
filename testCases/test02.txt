@@ -1,0 +1,5 @@
+Class:s3 s3datetime
+Method:_jd_to_gregorian
+Input:12345
+Oracle:oracle001
+Driver:python
