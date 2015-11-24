@@ -1,8 +1,0 @@
-class: 
-method: 
-input: 
-oracle: ./tests/test16.txt
-driver: selenium
-
-Starts at Eden login page, inputs "test" in email and password field and 
-checks to see if "Invalid Login" is displayed

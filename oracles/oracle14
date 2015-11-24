@@ -1,1 +1,0 @@
-output: self.approved(table, record, approved=False)

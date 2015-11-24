@@ -1,6 +1,0 @@
-class: modules webkit_url2png.py
-method: save_webpage_screenshot
-input: http://www.google.com 1024 768
-oracle: oracle04.txt
-driver: 
-

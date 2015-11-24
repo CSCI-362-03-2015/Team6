@@ -1,1 +1,0 @@
-output: self.base.get("cd_version", False)

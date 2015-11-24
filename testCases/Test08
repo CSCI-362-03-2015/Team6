@@ -1,5 +1,0 @@
-class: modules s3 s3query.py
-method: is_numeric
-input: 5
-oracle: oracle08.txt
-driver: python

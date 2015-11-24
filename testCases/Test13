@@ -1,5 +1,0 @@
-class: modules s3 s3aaa.py
-method: is_owner
-input: user_id
-oracle: oracle13.txt
-driver: python

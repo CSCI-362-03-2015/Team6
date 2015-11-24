@@ -1,5 +1,0 @@
-class: modules s3 s3timeplot.py
-method: is_now
-input: 01/01/01/01/15
-oracle: oracle10.txt
-driver: python

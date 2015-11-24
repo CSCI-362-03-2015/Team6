@@ -1,8 +1,0 @@
-class: 
-method: 
-input: 
-oracle: ./tests/test19.txt
-driver: selenium
-
-Starts at the Eden login page. Inputs "admin@example.com" into the email and "testing" into the password
-and checks to see if "Logged In" is displayed on the screen.

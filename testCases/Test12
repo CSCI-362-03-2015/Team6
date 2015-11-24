@@ -1,5 +1,0 @@
-class: modules s3 s3task.py
-method: _is_alive
-input: worker_alive
-oracle: oracle12.txt
-driver: python
