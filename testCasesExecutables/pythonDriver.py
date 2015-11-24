@@ -22,8 +22,6 @@ import sys
 
 #Creates a list of all the test cases
 filelocation = abspath(join(dirname( __file__ ), '../', 'testCases'))
-print("------------filelocation: " + filelocation + "----------------")
-print("Correct Directory: /home/steven/Desktop/Team6-master/testCases")
 
 report = abspath(join(dirname( __file__ ), '../', 'temp'))
 reportFile = open(report + "/report.txt", 'a')
@@ -55,7 +53,6 @@ for testCase in range(0, numTests):
         oracle = array[3].strip()
         eden = abspath(join(dirname( __file__ ), '../', 'docs/eden/modules'))
         newPath = sys.path.insert(0, eden)
-	print("~~~~~~~~~Class Name: " + className)
         #Imports the class name so that the method can be called
 	module = __import__(className)
         #module = importlib.import_module("arabic_reshaper.py", __name__)
@@ -75,6 +72,7 @@ for testCase in range(0, numTests):
                 i+=1
 
         expectedOutput = array2[2]
+	description = array2[0]
 
         if (result == expectedOutput):
             outcome = "PASS"
@@ -84,4 +82,6 @@ for testCase in range(0, numTests):
 
         reportFile.write("Class Name: " + className + ", Method Name: " +
                          methodName + ", Input: " + inputData + ", Oracle: " + oracle + ", Result: " + outcome)
+	print("Class Name: " + className + ", Method Name: " +
+                         methodName + ", Input: " + inputData + ", Description: " + description + ", Result: " + outcome)
         reportFile.close()
