@@ -34,12 +34,12 @@ for file in os.listdir(str(filelocation)):
 
 #Itterates through the text file and assigns the class, method, inputs, etc. for use in the driver
 numTests = len(testList)
+print(numTests)
+i = 0
 for testCase in range(0, numTests):
-    i = 0
     testName = abspath(join(dirname( __file__ ), '..', "testCases/" + str(testList[i])))
-    print(testName)
-    i+=1
     array = []
+    i+=1
     with open(testName, "r") as ins:
         j = 0
         for line in ins:
@@ -66,10 +66,10 @@ for testCase in range(0, numTests):
         oracleLocation = abspath(join(dirname( __file__ ), '..', 'oracles'))
         array2 = []
         with open(oracleLocation + "/" + oracle, "r") as filein:
-            i = 0
+            k = 0
             for line in filein:
                 array2.append(line.split(':',1)[-1])
-                i+=1
+                k+=1
 
         expectedOutput = array2[2]
 	description = array2[0]
@@ -83,7 +83,7 @@ for testCase in range(0, numTests):
         reportFile.write("Class Name: " + className + ", Method Name: " +
                          methodName + ", Input: " + inputData + ", Oracle: " + 
 			 oracle + ", Result: " + outcome)
-	print("Class Name: " + className + ", Method Name: " +
+        print("Class Name: " + className + ", Method Name: " +
              methodName + ", Input: " + inputData + ", Description: " + description + ", Result: " + 
 	     outcome)
 reportFile.close()
