@@ -1,5 +1,0 @@
-Class:modules EXIF
-Method:make_string
-Input:12345
-Oracle:oracle001
-Driver:python
