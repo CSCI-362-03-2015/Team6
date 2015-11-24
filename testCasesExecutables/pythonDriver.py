@@ -60,7 +60,7 @@ for testCase in range(0, numTests):
         x = getattr(module, methodName)
 
         #Calls the tested method and places it in result to be compared with the orcale's expected output
-        result = x(inputData)
+        result = int(x(inputData))
 
         oracleLocation = abspath(join(dirname( __file__ ), '..', 'oracles'))
         array2 = []
@@ -73,7 +73,7 @@ for testCase in range(0, numTests):
         expectedOutput = array2[2]
 	description = array2[0]
 
-        if (result == expectedOutput):
+        if (int(result) == int(expectedOutput)):
             outcome = "PASS"
 
         else:
