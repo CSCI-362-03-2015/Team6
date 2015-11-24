@@ -81,8 +81,8 @@ for testCase in range(0, numTests):
 
         reportFile.write("Class Name: " + className + ", Method Name: " +
                          methodName + ", Input: " + inputData + ", Oracle: " + 
-			 oracle + ", Result: " + outcome)
+			 oracle + ", Result: " + outcome + "\n")
         print("Class Name: " + className + ", Method Name: " +
              methodName + ", Input: " + inputData + ", Description: " + description + ", Result: " + 
-	     outcome)
+	     outcome + "\n")
 reportFile.close()
