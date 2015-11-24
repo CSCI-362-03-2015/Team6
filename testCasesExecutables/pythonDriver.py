@@ -51,9 +51,9 @@ for testCase in range(0, numTests):
         inputData = array[2].strip()
         oracle = array[3].strip() + ".txt"
         if(folderLocation != "modules"):
-            eden = abspath(join(dirname( __file__ ), '../', 'eden/' + 'modules/' + str(folderLocation) + '/'))
+            eden = abspath(join(dirname( __file__ ), '../', '/temp/eden/' + 'modules/' + str(folderLocation) + '/'))
         else:
-            eden = abspath(join(dirname( __file__ ), '../', 'eden/' + 'modules/'))
+            eden = abspath(join(dirname( __file__ ), '../', '/temp/eden/' + 'modules/'))
         newPath = sys.path.insert(0, eden)
         #Imports the class name so that the method can be called
         module = __import__(str(classLocation))
