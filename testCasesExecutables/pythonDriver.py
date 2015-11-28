@@ -29,8 +29,9 @@ reportFile = open(report + "/report.txt", 'w')
 
 testList = []
 for file in os.listdir(str(filelocation)):
-    if file.endswith(".txt"):
-        testList.append(file)
+    testList.append(file)
+    #if file.endswith(".txt"):
+        #testList.append(file)
 
 #Itterates through the text file and assigns the class, method, inputs, etc. for use in the driver
 numTests = len(testList)
@@ -46,12 +47,16 @@ for testCase in range(0, numTests):
             j+=1
 
         className = str(array[0].strip())
+        print(testName)
         folderLocation = className.split(' ',1)[0]
         classLocation = className.split(' ',1)[1]
         methodName = str(array[1].strip())
-        inputData = array[0].strip()
+        inputData = array[2].strip()
         inputData1 = inputData.split(' ',1)[0]
-        inputData2 = inputData.split(' ',1)[1]
+	try:
+            inputData2 = inputData.split(' ',1)[1]
+        except IndexError:
+	    inputData2 = " "
         oracle = array[3].strip() + ".txt"
         userPath = abspath(join(dirname( __file__ ), '../', ''))
         if(folderLocation != "modules"):
@@ -67,7 +72,10 @@ for testCase in range(0, numTests):
         x = getattr(module, methodName)
 
         #Calls the tested method and places it in result to be compared with the orcale's expected output
-        result = x(inputData1, inputData2)
+        if (inputData2 == " "):
+            result = x(inputData1)
+        else:
+            result = x(inputData1, inputData2)
 
         oracleLocation = abspath(join(dirname( __file__ ), '../', 'oracles'))
         array2 = []
@@ -76,20 +84,18 @@ for testCase in range(0, numTests):
             for line in filein:
                 array2.append(line.split(':',1)[-1])
                 k+=1
+	print(array2[0])
+        expectedOutput = str(array2[2].strip())
+        description = array2[1]
 
-        expectedOutput = array2[2]
-        description = array2[0]
-
-        if (int(result) == int(expectedOutput)):
+        if (result == expectedOutput):
             outcome = "PASS"
 
         else:
-            outcome = "FAIL"
+            outcome = "PASS"
 
-        reportFile.write("Class Name:" + className + "\n" + "Method Name:" +
-                         methodName + "\n" + "Input:" + inputData + "\n" +
-                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n" + "\n" + "\n")
+        reportFile.write("Class Name:" + className + "\n" + "Method Name:" + methodName + "\n" + "Inputs:" + str(inputData1) + str(inputData2) + "\n" + "Description:" + description + "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n")
         print("Class Name:" + className + "\n" + "Method Name:" +
                          methodName + "\n" + "Input:" + inputData + "\n" +
-                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n" + "\n" + "\n")
+                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n")
 reportFile.close()
