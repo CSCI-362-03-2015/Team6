@@ -47,7 +47,6 @@ for testCase in range(0, numTests):
             j+=1
 
         className = str(array[0].strip())
-        print(testName)
         folderLocation = className.split(' ',1)[0]
         classLocation = className.split(' ',1)[1]
         methodName = str(array[1].strip())
@@ -84,18 +83,17 @@ for testCase in range(0, numTests):
             for line in filein:
                 array2.append(line.split(':',1)[-1])
                 k+=1
-	print(array2[0])
         expectedOutput = str(array2[2].strip())
         description = array2[1]
 
-        if (result == expectedOutput):
+        if (str(result) == str(expectedOutput)):
             outcome = "PASS"
 
         else:
-            outcome = "PASS"
+            outcome = "FAIL"
 
         reportFile.write("Class Name:" + className + "\n" + "Method Name:" + methodName + "\n" + "Inputs:" + str(inputData1) + str(inputData2) + "\n" + "Description:" + description + "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n")
         print("Class Name:" + className + "\n" + "Method Name:" +
                          methodName + "\n" + "Input:" + inputData + "\n" +
-                         "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n")
+                         "Oracle:" + oracle + "\n")
 reportFile.close()

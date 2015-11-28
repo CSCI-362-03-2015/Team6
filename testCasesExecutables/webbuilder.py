@@ -33,7 +33,6 @@ def main():
 </body>
 </html>
 '''
-    print(contents)
     browseLocal(contents)
 
 def strToFile(text, filename):
