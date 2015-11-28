@@ -1,0 +1,5 @@
+class:modules feedparser
+method:_parse_date_iso8601
+input:2014331337  
+oracle:oracle08
+driver:python
