@@ -1,0 +1,3 @@
+name:oracle09
+description:parses the date to send the information to another method to build a date
+output:time.struct_time(tm_year=2015, tm_mon=11, tm_mday=24, tm_hour=10, tm_min=53, tm_sec=0, tm_wday=1, tm_yday=328, tm_isdst=0) 

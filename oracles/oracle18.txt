@@ -1,0 +1,3 @@
+name:oracle18
+description:converts the input into an int
+output:38

@@ -1,0 +1,3 @@
+name:oracle06
+description:parses the date to send the information to another method to build a date
+output:time.struct_time(tm_year=2020, tm_mon=6, tm_mday=2, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=1, tm_yday=154, tm_isdst=1) 

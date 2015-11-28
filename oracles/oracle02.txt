@@ -1,0 +1,3 @@
+name:oracle02
+description:Finds the GCD between two inputs
+output:1
