@@ -11,6 +11,7 @@ from types import FunctionType
 from os.path import *
 import os
 import sys
+import getopt
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #The shell needs to make a txt file calle testName.txt every time a
@@ -48,15 +49,15 @@ for testCase in range(0, numTests):
         folderLocation = className.split(' ',1)[0]
         classLocation = className.split(' ',1)[1]
         methodName = str(array[1].strip())
-        inputData = array[2].strip()
+        inputData = array[0].strip()
+        inputData1 = inputData.split(' ',1)[0]
+        inputData2 = inputData.split(' ',1)[1]
         oracle = array[3].strip() + ".txt"
         userPath = abspath(join(dirname( __file__ ), '../', ''))
-        print(userPath)
         if(folderLocation != "modules"):
             eden = userPath + '/temp/eden/modules/' + str(folderLocation) + '/'
         else:
             eden = userPath + '/temp/eden/modules/'
-        print(eden)
         newPath = sys.path.insert(0, eden)
         #Imports the class name so that the method can be called
         module = __import__(str(classLocation))
@@ -66,7 +67,7 @@ for testCase in range(0, numTests):
         x = getattr(module, methodName)
 
         #Calls the tested method and places it in result to be compared with the orcale's expected output
-        result = int(x(inputData))
+        result = x(inputData1, inputData2)
 
         oracleLocation = abspath(join(dirname( __file__ ), '../', 'oracles'))
         array2 = []
