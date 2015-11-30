@@ -14,9 +14,12 @@ def main():
   <meta content="text/html; charset=ISO-8859-1"
  http-equiv="content-type">
   <title>Team 6 Testing Framework Report</title>
+	
 </head>
 <body>
 
+<h1> Team6 </h1>
+<h2> Eden Test Results </h2>
 <table border="1"  style="width:100%">
   <tr>
 	<th> Class Name: </th>
