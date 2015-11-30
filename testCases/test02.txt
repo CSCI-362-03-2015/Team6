@@ -1,5 +1,0 @@
-class:modules EXIF
-method:gcd
-input:123 44
-oracle:oracle02
-driver:python

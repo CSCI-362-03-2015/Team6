@@ -1,5 +1,5 @@
 class:modules EXIF
 method:make_string
 input:aaaaa
-oracle:oracle11
+oracle:oracle12
 driver:python
