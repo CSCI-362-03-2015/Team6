@@ -52,10 +52,10 @@ for testCase in range(0, numTests):
         methodName = str(array[1].strip())
         inputData = array[2].strip()
         inputData1 = inputData.split(' ',1)[0]
-	try:
+        try:
             inputData2 = inputData.split(' ',1)[1]
         except IndexError:
-	    inputData2 = " "
+            inputData2 = " "
         oracle = array[3].strip() + ".txt"
         userPath = abspath(join(dirname( __file__ ), '../', ''))
         if(folderLocation != "modules"):
