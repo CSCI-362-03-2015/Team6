@@ -92,7 +92,7 @@ for testCase in range(0, numTests):
         else:
             outcome = "FAIL"
 
-        reportFile.write("Class Name:" + className + "\n" + "Method Name:" + methodName + "\n" + "Inputs:" + str(inputData1) + str(inputData2) + "\n" + "Description:" + description + "Oracle:" + oracle + "\n" + "Result:" + outcome + "\n")
+        reportFile.write(className + "\n" + methodName +  "\n" +  str(inputData1) + str(inputData2) + "\n" + description +  oracle + "\n" +  outcome + "\n")
         print("Class Name:" + className + "\n" + "Method Name:" +
                          methodName + "\n" + "Input:" + inputData + "\n" +
                          "Oracle:" + oracle + "\n")

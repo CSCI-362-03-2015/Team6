@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Running all testcases.....
+echo Running all testcases.......
 sleep 1
 
 #Runs all of the Python tests

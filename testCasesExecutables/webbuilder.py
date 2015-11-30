@@ -16,8 +16,17 @@ def main():
   <title>Team 6 Testing Framework Report</title>
 </head>
 <body>
-<table border="1" style="width:100%">
+
+<table border="1"  style="width:100%">
   <tr>
+	<th> Class Name: </th>
+	<th> Module Name: </th>
+	<th> Input: </th>
+	<th> Description: </th>
+	<th> Oracle: </th>
+	<th> Result: </th>
+ </tr>
+ <tr>
 '''
     reportsLocation = abspath(join(dirname( __file__ ), '../', 'temp'))
     reportFile = open(reportsLocation + "/report.txt", 'r')
