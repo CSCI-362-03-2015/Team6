@@ -43,7 +43,7 @@ for testCase in range(0, numTests):
         for line in ins:
             array.append(line.split(':',1)[-1])
             j+=1
-        print("~~~~~~~~Running Test: " + testName + "......")
+        print("----Running Test: " + testName + "----")
         className = str(array[0].strip())
         folderLocation = className.split(' ',1)[0]
         classLocation = className.split(' ',1)[1]
@@ -81,12 +81,12 @@ for testCase in range(0, numTests):
             for line in filein:
                 array2.append(line.split(':',1)[-1])
                 k+=1
-            print("~~~~~~~~~Oracle: " + array2[0] + "~~~~~~~")
+            print("----Oracle: " + array2[0])
             expectedOutput = str(array2[2].strip())
             description = array2[1]
 
         print("Result: " + str(result))
-        print("Output: " + str(expectedOutput))
+        print("Output: " + str(expectedOutput) + "\n\n")
         if (str(result) == str(expectedOutput)):
             outcome = "PASS"
 
