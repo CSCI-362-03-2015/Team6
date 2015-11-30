@@ -36,8 +36,8 @@ def main():
     i = 0
     for line in reportFile:
         if(i == 6):
-            i = 0
-            contents+= "</tr>" + "<tr>" + "<td>" + str(line) + "</td>"
+        	i = 0
+        	contents+= "</tr>" + "<tr>" 
         contents+= "<td>" + str(line) + "</td>"
         i+=1
     contents+= '''
