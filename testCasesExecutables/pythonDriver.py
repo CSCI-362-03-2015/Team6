@@ -14,10 +14,8 @@ import sys
 import getopt
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#The shell needs to make a txt file calle testName.txt every time a
-#test is run and put the name of the test case file in it. The this driver
-#will parse that file(for 1 line containing the test case) and use it to call
-#the test case.
+#Runs through all test cases in the testcases folder and imports/runs all
+#classe and methods as needed.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #Creates a list of all the test cases
