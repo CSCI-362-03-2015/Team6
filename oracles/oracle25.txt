@@ -1,3 +1,3 @@
 name:oracle25
 description:Converts input into big endian int
-output:6
+output:103
