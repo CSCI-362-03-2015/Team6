@@ -15,7 +15,7 @@ import getopt
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Runs through all test cases in the testcases folder and imports/runs all
-#classe and methods as needed.
+#classes and methods as needed.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #Creates a list of all the test cases
@@ -81,12 +81,10 @@ for testCase in range(0, numTests):
             for line in filein:
                 array2.append(line.split(':',1)[-1])
                 k+=1
-            print("----Oracle: " + array2[0])
+
             expectedOutput = str(array2[2].strip())
             description = array2[1]
 
-        print("Result: " + str(result))
-        print("Output: " + str(expectedOutput) + "\n\n")
         if (str(result) == str(expectedOutput)):
             outcome = "PASS"
 
@@ -94,7 +92,7 @@ for testCase in range(0, numTests):
             outcome = "FAIL"
 
         reportFile.write(className + "\n" + methodName +  "\n" +  str(inputData1) + str(inputData2) + "\n" + description +  oracle + "\n" +  outcome + "\n")
-        ##print("Class Name:" + className + "\n" + "Method Name:" +
-        ##                 methodName + "\n" + "Input:" + inputData + "\n" +
-        ##                 "Oracle:" + oracle + "\n")
+        print("Class Name:" + className + "\n" + "Method Name:" +
+                         methodName + "\n" + "Input:" + inputData + "\n" +
+                         "Oracle:" + oracle + "\n" + "Results: " + outcome + "\n")
 reportFile.close()

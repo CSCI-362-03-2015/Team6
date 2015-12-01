@@ -1,3 +1,0 @@
-name:oracle25
-description:Checks if alphanumeric and returns a boolean
-output:False

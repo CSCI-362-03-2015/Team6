@@ -1,4 +1,0 @@
-name:oracle23
-description:Checks if alphanumeric and returns a boolean
-output:True
-

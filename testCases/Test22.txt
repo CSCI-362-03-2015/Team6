@@ -1,5 +1,0 @@
-class:modules EXIF
-method:isAlphanum
-input:d
-oracle:oracle22
-driver:python

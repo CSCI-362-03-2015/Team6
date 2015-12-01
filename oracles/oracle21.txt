@@ -1,3 +1,0 @@
-name:oracle21
-description:Checks if alphanumeric and returns a boolean
-output:True
