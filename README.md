@@ -43,7 +43,7 @@ Start web2py:
     
 Download Team6 repository:
 
-sudo git clone https://github.com/CSCI-362-03-2015/Team6.git    
+		sudo git clone https://github.com/CSCI-362-03-2015/Team6.git    
 
 Symlink the repository into testsuites folder of Eden:
 
