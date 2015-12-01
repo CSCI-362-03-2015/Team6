@@ -1,5 +1,5 @@
-class: modules/EXIF.py 
-method: isAlphanum
-input: ?  
-oracle: oracle25
-driver: python
+class:modules EXIF 
+method:isAlphanum
+input:?  
+oracle:oracle25
+driver:python
