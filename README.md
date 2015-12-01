@@ -54,3 +54,10 @@ Run the framework while in the Team6 repo:
 		cd scripts/
 		sudo ./runAllTests.sh
 
+
+
+Selenium DOES work, you can run the script by going into testCasesExecutables and running:
+		
+		sudo python selenium_driver.py
+
+**Web output was not implemented for the Selenium test cases
