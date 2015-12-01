@@ -22,6 +22,7 @@ def main():
 <h2> Eden Test Results </h2>
 <table border="1"  style="width:100%">
   <tr>
+	<th> Test Number: </th>
 	<th> Class Name: </th>
 	<th> Module Name: </th>
 	<th> Input: </th>
@@ -35,7 +36,7 @@ def main():
     reportFile = open(reportsLocation + "/report.txt", 'r')
     i = 0
     for line in reportFile:
-        if(i == 6):
+        if(i == 7):
         	i = 0
         	contents+= "</tr>" + "<tr>" 
         contents+= "<td>" + str(line) + "</td>"

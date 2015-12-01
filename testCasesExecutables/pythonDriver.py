@@ -44,6 +44,7 @@ for testCase in range(0, numTests):
             array.append(line.split(':',1)[-1])
             j+=1
         print("----Running Test: " + testName + "----")
+	filename = basename(testName)
         className = str(array[0].strip())
         folderLocation = className.split(' ',1)[0]
         classLocation = className.split(' ',1)[1]
@@ -91,7 +92,7 @@ for testCase in range(0, numTests):
         else:
             outcome = "FAIL"
 
-        reportFile.write(className + "\n" + methodName +  "\n" +  str(inputData1) + str(inputData2) + "\n" + description +  oracle + "\n" +  outcome + "\n")
+        reportFile.write(filename + "\n" + className + "\n" + methodName +  "\n" +  str(inputData1) + str(inputData2) + "\n" + description +  oracle + "\n" +  outcome + "\n")
         print("Class Name:" + className + "\n" + "Method Name:" +
                          methodName + "\n" + "Input:" + inputData + "\n" +
                          "Oracle:" + oracle + "\n" + "Results: " + outcome + "\n")
