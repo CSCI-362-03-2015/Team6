@@ -5,7 +5,7 @@ sleep 1
 
 #Runs all of the Python tests
 python ../testCasesExecutables/pythonDriver.py
-
+sleep 1
 
 echo Opening default browser with results....
 sleep 1
