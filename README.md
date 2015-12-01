@@ -10,14 +10,15 @@ http://eden.sahanafoundation.org/raw-attachment/wiki/InstallationGuidelines/Linu
 
 Run using:
 
-sudo bash debian_ubuntu_eden_dev.3.2.2.sh
+		sudo bash debian_ubuntu_eden_dev.3.2.2.sh
+
     **if running from a different directory you will need to run: 
 
-        sudo bash /home/<username>/Downloads/debian_ubuntu_eden_dev.3.2.2.sh
+		sudo bash /home/<username>/Downloads/debian_ubuntu_eden_dev.3.2.2.sh
 
         
 
-This will install web2py into /home/web2py:
+This will install web2py into /home/web2py
 The terminal will ask you for a choice:
 Medium - installs all mandatory and some common optional dependencies
 Quick - installs only mandatory dependencies
@@ -33,11 +34,11 @@ Select 1 for the medium install
 
 
 Start web2py:
-    Start web2py by moving into the web2py main directory and using the command
+	Start web2py by moving into the web2py main directory and using the command
         
-        python web2py.py -a 1234
+		python web2py.py -a 1234
    
-     **May need to install Google Chrome: download chromedriver and put it in your bash path
+**May need to install Google Chrome: download chromedriver and put it in your bash path
 
     
 Download Team6 repository:
@@ -46,10 +47,10 @@ sudo git clone https://github.com/CSCI-362-03-2015/Team6.git
 
 Symlink the repository into testsuites folder of Eden:
 
-sudo ln -s /home/www-data/Team6 /home/www-data/web2py/applications/eden/tests/implementation/testsuites
+		sudo ln -s /home/www-data/Team6 /home/www-data/web2py/applications/eden/tests/implementation/testsuites
 
 Run the framework while in the Team6 repo:
     
-    cd scripts/
-    sudo ./runAllTests.sh
+		cd scripts/
+		sudo ./runAllTests.sh
 
