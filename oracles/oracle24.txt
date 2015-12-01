@@ -1,0 +1,3 @@
+name:oracle24
+description:Checks if alphanumeric and returns a boolean
+output:True

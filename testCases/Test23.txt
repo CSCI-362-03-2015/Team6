@@ -1,0 +1,5 @@
+class: modules/EXIF.py 
+method: isAlphanum
+input: e   
+oracle: oracle23
+driver: python

@@ -1,0 +1,5 @@
+class: modules
+method: isAlphanum
+input: d
+oracle: oracle22
+driver: python
