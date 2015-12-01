@@ -3,7 +3,7 @@ _parse_date_iso8601
 15:53:00+05:00 
 parses the date to send the information to another method to build a date
 oracle09.txt
-PASS
+FAIL
 modules EXIF
 make_string
 aaaaa 
@@ -63,7 +63,7 @@ _parse_date_iso8601
 99:53:00+05:00 
 parses the date to send the information to another method to build a date
 oracle10.txt
-PASS
+FAIL
 modules feedparser
 _parse_date_iso8601
 201540105 
