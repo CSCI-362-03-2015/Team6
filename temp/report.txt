@@ -1,0 +1,84 @@
+modules EXIF
+make_string
+!$% 
+Turns the input into a string
+oracle13.txt
+PASS
+modules EXIF
+make_string
+12345 
+Turns the input into a string
+oracle11.txt
+PASS
+modules EXIF
+s2n_motorola
+3 
+converts the input into an int
+oracle17.txt
+PASS
+modules feedparser
+_parse_date_iso8601
+2014331207 
+parses the date to send the information to another method to build a date
+oracle07.txt
+PASS
+modules feedparser
+_parse_date_iso8601
+15:53:00+05:00 
+parses the date to send the information to another method to build a date
+oracle09.txt
+PASS
+modules EXIF
+s2n_motorola
+& 
+converts the input into an int
+oracle18.txt
+PASS
+modules EXIF
+s2n_motorola
+L 
+converts the input into an int
+oracle20.txt
+PASS
+modules EXIF
+s2n_motorola
+a 
+converts the input into an int
+oracle16.txt
+PASS
+modules EXIF
+make_string
+aaaaa 
+Turns the input into a string
+oracle12.txt
+PASS
+modules EXIF
+make_string
+abc123 
+Turns the input into a string
+oracle15.txt
+PASS
+modules feedparser
+_parse_date_iso8601
+99:53:00+05:00 
+parses the date to send the information to another method to build a date
+oracle10.txt
+PASS
+modules EXIF
+make_string
+123abc 
+Turns the input into a string
+oracle14.txt
+PASS
+modules feedparser
+_parse_date_iso8601
+201540105 
+parses the date to send the information to another method to build a date
+oracle06.txt
+PASS
+modules feedparser
+_parse_date_iso8601
+2014331337 
+parses the date to send the information to another method to build a date
+oracle08.txt
+PASS
