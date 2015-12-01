@@ -12,7 +12,7 @@ Run using:
 
 		sudo bash debian_ubuntu_eden_dev.3.2.2.sh
 
-    **if running from a different directory you will need to run: 
+**if running from a different directory you will need to run: 
 
 		sudo bash /home/<username>/Downloads/debian_ubuntu_eden_dev.3.2.2.sh
 
