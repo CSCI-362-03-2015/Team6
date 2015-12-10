@@ -1,5 +1,0 @@
-class:modules EXIF
-method:s2n_intel
-input:y  
-oracle:oracle05
-driver:python

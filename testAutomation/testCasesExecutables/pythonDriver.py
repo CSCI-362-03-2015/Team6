@@ -27,9 +27,9 @@ reportFile = open(report + "/report.txt", 'w')
 
 testList = []
 for file in os.listdir(str(filelocation)):
-    #testList.append(file)
-    if file.endswith(".txt"):
-        testList.append(file)
+    testList.append(file)
+    #if file.endswith(".txt"):
+        #testList.append(file)
 
 #Itterates through the text file and assigns the class, method, inputs, etc. for use in the driver
 numTests = len(testList)

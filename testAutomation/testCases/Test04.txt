@@ -1,5 +1,0 @@
-class:modules EXIF
-method:s2n_motorola 
-input:x  
-oracle:oracle04
-driver:python

@@ -1,3 +1,4 @@
-name:oracle14
-description:Turns the input into a string
-expected:111aA
+name:oracle01
+description:Finds the GCD between two inputs
+output:3
+
