@@ -1,3 +1,0 @@
-name:oracle16
-description:converts the input into an int
-output:97

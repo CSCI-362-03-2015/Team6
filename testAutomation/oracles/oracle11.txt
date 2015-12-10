@@ -1,3 +1,0 @@
-name:oracle11
-description:Turns the input into a string
-expected:12345

@@ -1,3 +1,0 @@
-name:oracle14
-description:Turns the input into a string
-expected:123abc

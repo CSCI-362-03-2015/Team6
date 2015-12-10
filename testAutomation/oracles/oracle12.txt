@@ -1,3 +1,0 @@
-name:oracle12
-description:Turns the input into a string
-expected:aaaaa

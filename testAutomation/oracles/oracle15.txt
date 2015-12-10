@@ -1,3 +1,0 @@
-name:oracle15
-description:Turns the input into a string
-expected:abc123
