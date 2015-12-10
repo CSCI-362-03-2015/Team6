@@ -5,7 +5,7 @@ sleep 3
 
 #Runs all of the Python tests
 python ./TestAutomation/testCasesExecutables/pythonDriver.py
-sleep 3
+sleep 2
 
 echo Opening default browser with results....
 sleep 3
