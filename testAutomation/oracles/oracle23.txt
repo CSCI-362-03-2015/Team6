@@ -1,0 +1,3 @@
+name:oracle23
+description:Converts input into big endian int
+output:101

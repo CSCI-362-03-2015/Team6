@@ -1,0 +1,3 @@
+name:oracle17
+description:converts the input into an int
+output:51
