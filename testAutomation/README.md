@@ -51,7 +51,7 @@ Symlink the repository into testsuites folder of Eden:
 
 Run the framework while in the Team6 repo:
     
-		cd scripts/
+		cd testAutomation/scripts
 		sudo ./runAllTests.sh
 
 
