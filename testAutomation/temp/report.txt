@@ -1,0 +1,168 @@
+Test25.txt
+modules EXIF
+s2n_intel
+g 
+Converts input into big endian int
+oracle25.txt
+PASS
+Test08.txt
+modules feedparser
+_parse_date_iso8601
+2014331337 
+parses the date to send the information to another method to build a date
+oracle08.txt
+PASS
+Test12.txt
+modules EXIF
+make_string
+aaaaa 
+Turns the input into a string
+oracle12.txt
+PASS
+Test11.txt
+modules EXIF
+make_string
+12345 
+Turns the input into a string
+oracle11.txt
+PASS
+Test10.txt
+modules feedparser
+_parse_date_iso8601
+99:53:00+05:00 
+parses the date to send the information to another method to build a date
+oracle10.txt
+PASS
+Test20.txt
+modules EXIF
+s2n_motorola
+L 
+converts the input into an int
+oracle20.txt
+PASS
+Test14.txt
+modules EXIF
+make_string
+123abc 
+Turns the input into a string
+oracle14.txt
+PASS
+Test18.txt
+modules EXIF
+s2n_motorola
+& 
+converts the input into an int
+oracle18.txt
+PASS
+Test01.txt
+modules EXIF
+make_string
+111aA 
+Turns the input into a string
+oracle01.txt
+PASS
+Test21.txt
+modules EXIF
+s2n_intel
+c 
+Converts input into big endian int
+oracle21.txt
+PASS
+Test24.txt
+modules EXIF
+s2n_intel
+f 
+Converts input into big endian int
+oracle24.txt
+PASS
+Test06.txt
+modules feedparser
+_parse_date_iso8601
+201540105 
+parses the date to send the information to another method to build a date
+oracle06.txt
+PASS
+Test09.txt
+modules feedparser
+_parse_date_iso8601
+15:53:00+05:00 
+parses the date to send the information to another method to build a date
+oracle09.txt
+PASS
+Test04.txt
+modules EXIF
+s2n_motorola
+x 
+converts the input into an int
+oracle04.txt
+FAIL
+Test02.txt
+modules EXIF
+make_string
+AAzz123 
+Turns the input into a string
+oracle02.txt
+PASS
+Test16.txt
+modules EXIF
+s2n_motorola
+a 
+converts the input into an int
+oracle16.txt
+PASS
+Test07.txt
+modules feedparser
+_parse_date_iso8601
+2014331207 
+parses the date to send the information to another method to build a date
+oracle07.txt
+PASS
+Test15.txt
+modules EXIF
+make_string
+abc123 
+Turns the input into a string
+oracle15.txt
+PASS
+Test22.txt
+modules EXIF
+s2n_intel
+d 
+Converts input into big endian int
+oracle22.txt
+PASS
+Test13.txt
+modules EXIF
+make_string
+!$% 
+Turns the input into a string
+oracle13.txt
+PASS
+Test05.txt
+modules EXIF
+s2n_intel
+y 
+Converts input into big endian int
+oracle05.txt
+FAIL
+Test23.txt
+modules EXIF
+s2n_intel
+e 
+Converts input into big endian int
+oracle23.txt
+PASS
+Test03.txt
+modules EXIF
+make_string
+12a45 
+Turns the input into a string
+oracle03.txt
+PASS
+Test17.txt
+modules EXIF
+s2n_motorola
+3 
+converts the input into an int
+oracle17.txt
+PASS
