@@ -1,0 +1,5 @@
+class:modules EXIF
+method:make_string
+input:!$%
+oracle:oracle13
+driver:python
